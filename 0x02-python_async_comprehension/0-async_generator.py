@@ -4,7 +4,7 @@ import asyncio
 import random
 
 
-async def async_generator() -> float: # type: ignore
+async def async_generator() -> float:
     """"
     This mehod is a coroutine called async_generator that takes no arguments.
     The coroutine will loop 10 times,

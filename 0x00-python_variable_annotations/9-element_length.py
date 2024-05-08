@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """module has one func"""
-
-
 from typing import Iterable, Sequence, List, Tuple
 
 

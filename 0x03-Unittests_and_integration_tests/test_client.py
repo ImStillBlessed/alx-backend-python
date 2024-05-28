@@ -72,9 +72,11 @@ class TestGithubOrgClient(unittest.TestCase):
 class MockResponse:
     """Mock response for requests.get"""
     def __init__(self, json_data):
+        """Initialization for the MockResponse class"""
         self.json_data = json_data
 
     def json(self):
+        """Return the json data"""
         return self.json_data
 
 

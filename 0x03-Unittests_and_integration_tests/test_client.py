@@ -2,7 +2,6 @@
 """Test module for GithubOrgClient class"""
 
 import unittest
-import requests
 from unittest.mock import patch, PropertyMock
 from parameterized import parameterized, parameterized_class
 from fixtures import TEST_PAYLOAD
@@ -90,8 +89,8 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         cls.get_patcher = patch('requests.get')
         cls.mock_get = cls.get_patcher.start()
 
-        # Define the side_effect function
         def side_effect(url):
+            """The sideEffect function helper"""
             if url == cls.org_payload["repos_url"]:
                 return MockResponse(cls.repos_payload)
             return MockResponse(cls.org_payload)

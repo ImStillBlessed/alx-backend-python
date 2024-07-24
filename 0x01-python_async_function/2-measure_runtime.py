@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-module has 1 func.
+This module contains 1 function.
 '''
 import time
 
@@ -8,7 +8,16 @@ wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
 async def measure_time(n: int, max_delay: int) -> float:
-    """.retuns tge total time for tge whole async"""
+    """
+    Returns the average time taken for the whole async operation.
+
+    Args:
+        n (int): Number of times to spawn wait_n.
+        max_delay (int): Maximum delay in seconds for each wait_n call.
+    
+    Returns:
+        float: The average time per call.
+    """
     start = time.time()
     await wait_n(n, max_delay)
     total_delay = time.time() - start
